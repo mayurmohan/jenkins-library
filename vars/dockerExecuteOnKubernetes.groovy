@@ -221,7 +221,7 @@ void call(Map parameters = [:], body) {
         echo "DDDDDDDDD"
         echo "user config: ${script.commonPipelineEnvironment.configuration}"
         echo "default config: ${script.commonPipelineEnvironment.defaultConfiguration}"
-        echo "custom defaults: ${script.commonPipelineEnvironment.getCustomDefaults()}"
+        echo "custom defaults: ${script.commonPipelineEnvironment.customDefaults}"
         echo "EEEEEEEEEE"
 
 
