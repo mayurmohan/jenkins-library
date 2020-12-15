@@ -214,6 +214,12 @@ import hudson.AbortException
 void call(Map parameters = [:], body) {
     handlePipelineStepErrors(stepName: STEP_NAME, stepParameters: parameters, failOnError: true) {
 
+        echo "XXXXXXXXXXX"
+        this.commonPipelineEnvironment.configuration
+        echo "YYYYYYYYYYY"
+        this.commonPipelineEnvironment.defaultConfiguration
+        echo "ZZZZZZZZZZZ"
+
         final script = checkScript(this, parameters) ?: this
         def utils = parameters.juStabUtils ?: new Utils()
         String stageName = parameters.stageName ?: env.STAGE_NAME
