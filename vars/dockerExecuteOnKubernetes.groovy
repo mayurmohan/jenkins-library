@@ -218,11 +218,11 @@ void call(Map parameters = [:], body) {
         def utils = parameters.juStabUtils ?: new Utils()
         String stageName = parameters.stageName ?: env.STAGE_NAME
 
-        echo "PXXXXXXXXXXX"
-        parameters.script.commonPipelineEnvironment.configuration
-        echo "PYYYYYYYYYYY"
-        parameters.script.commonPipelineEnvironment.defaultConfiguration
-        echo "PZZZZZZZZZZZ"
+        echo "AAAAAAAA"
+        echo "${script.commonPipelineEnvironment.configuration}"
+        echo "BBBBB"
+        echo "${script.commonPipelineEnvironment.defaultConfiguration}"
+        echo "CCCC"
 
         if (!JenkinsUtils.isPluginActive(PLUGIN_ID_KUBERNETES)) {
             error("[ERROR][${STEP_NAME}] not supported. Plugin '${PLUGIN_ID_KUBERNETES}' is not installed or not active.")
