@@ -87,6 +87,8 @@ class DefaultValueCache implements Serializable {
                     "Exception stacktrace: ${Arrays.toString(e.getStackTrace())}"
             }
         }
+        steps.echo "XXXXXXXXXX"
+        steps.echo "default values: ${defaultValues}"
         return defaultValues
     }
 
