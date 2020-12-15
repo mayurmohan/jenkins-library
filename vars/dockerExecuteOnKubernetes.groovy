@@ -36,6 +36,11 @@ import hudson.AbortException
         'additionalPodProperties',
         'resources',
     /**
+     * Set this to 'false' to bypass a docker image pull.
+     * Useful during development process. Allows testing of images which are available in the local registry only.
+     */
+    'dockerPullImage',
+    /**
      * Print more detailed information into the log.
      * @possibleValues `true`, `false`
      */
@@ -108,11 +113,6 @@ import hudson.AbortException
      * Optional name of the docker image that should be used. If no docker image is provided, the closure will be executed in the jnlp agent container.
      */
     'dockerImage',
-    /**
-     * Set this to 'false' to bypass a docker image pull.
-     * Useful during development process. Allows testing of images which are available in the local registry only.
-     */
-    'dockerPullImage',
     /**
      * Specifies a dedicated user home directory for the container which will be passed as value for environment variable `HOME`.
      */
