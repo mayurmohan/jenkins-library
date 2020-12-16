@@ -5,6 +5,7 @@
 
 #Project Setup
 general:
+  dockerPullImage: true
   collectTelemetryData: true
   logFormat: 'plain'
   changeManagement:
@@ -216,7 +217,6 @@ steps:
     sidecarPullImage: true
     stashContent: []
   dockerExecuteOnKubernetes:
-    dockerPullImage: true
     sidecarPullImage: true
     stashContent: []
     stashIncludes:
